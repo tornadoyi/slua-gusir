@@ -1,34 +1,22 @@
-# Copyright (C) 2009 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
 LOCAL_PATH := $(call my-dir)
 
-MY_SRC_PATH := $(LOCAL_PATH)/../../
-MY_3RD_PATH := $(LOCAL_PATH)/..
-MY_INCLUDE_PATH := $(LOCAL_PATH)/../../luajit/src
-MY_EXTERN_PATH := $(LOCAL_PATH)/../../libluajit/android
+ROOT_PATH := $(LOCAL_PATH)/../../../
+3RD_PATH := $(ROOT_PATH)/3rd
+3RD_PBC_PATH := $(3RD_PATH)/pbc-master
+INCLUDE_LUA_JIT_PATH := $(ROOT_PATH)/LuaJIT-2.1.0-beta2/src
+INCLUDE_PBC_PATH := $(3RD_PBC_PATH)
+EXTERN_PATH := $(ROOT_PATH)/libs/luajit/android
 
 #display info
-#$(warning $(MY_SRC_PATH)) 
-#$(warning $(MY_INCLUDE_PATH))
-#$(warning $(MY_EXTERN_PATH))
+#$(warning $(ROOT_PATH)) 
+#$(warning $(3RD_PATH))
+#$(warning $(EXTERN_PATH))
 
 #-----------------------------------------------------------
 #set where to link luajit static module
 include $(CLEAR_VARS)
 LOCAL_MODULE := luajit
-LOCAL_SRC_FILES := $(MY_EXTERN_PATH)/$(TARGET_ARCH_ABI)/libluajit.a
+LOCAL_SRC_FILES := $(EXTERN_PATH)/$(TARGET_ARCH_ABI)/libluajit.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 #-----------------------------------------------------------
@@ -44,25 +32,25 @@ LOCAL_MODULE := slua
 LOCAL_CPP_FEATURES := exceptions
 
 LOCAL_SRC_FILES :=\
-	$(MY_SRC_PATH)/slua.c \
-	$(MY_3RD_PATH)/pbc-master/src/alloc.c \
-	$(MY_3RD_PATH)/pbc-master/src/array.c \
-	$(MY_3RD_PATH)/pbc-master/src/bootstrap.c \
-	$(MY_3RD_PATH)/pbc-master/src/context.c \
-	$(MY_3RD_PATH)/pbc-master/src/decode.c \
-	$(MY_3RD_PATH)/pbc-master/src/map.c \
-	$(MY_3RD_PATH)/pbc-master/src/pattern.c \
-	$(MY_3RD_PATH)/pbc-master/src/proto.c \
-	$(MY_3RD_PATH)/pbc-master/src/register.c \
-	$(MY_3RD_PATH)/pbc-master/src/rmessage.c \
-	$(MY_3RD_PATH)/pbc-master/src/stringpool.c \
-	$(MY_3RD_PATH)/pbc-master/src/varint.c \
-	$(MY_3RD_PATH)/pbc-master/src/wmessage.c \
-	$(MY_3RD_PATH)/pbc-master/binding/lua/pbc-lua.c \
+	$(ROOT_PATH)/src/slua.c \
+	$(3RD_PBC_PATH)/src/alloc.c \
+	$(3RD_PBC_PATH)/src/array.c \
+	$(3RD_PBC_PATH)/src/bootstrap.c \
+	$(3RD_PBC_PATH)/src/context.c \
+	$(3RD_PBC_PATH)/src/decode.c \
+	$(3RD_PBC_PATH)/src/map.c \
+	$(3RD_PBC_PATH)/src/pattern.c \
+	$(3RD_PBC_PATH)/src/proto.c \
+	$(3RD_PBC_PATH)/src/register.c \
+	$(3RD_PBC_PATH)/src/rmessage.c \
+	$(3RD_PBC_PATH)/src/stringpool.c \
+	$(3RD_PBC_PATH)/src/varint.c \
+	$(3RD_PBC_PATH)/src/wmessage.c \
+	$(3RD_PBC_PATH)/binding/lua/pbc-lua.c \
 
 LOCAL_C_INCLUDES :=\
-	$(MY_INCLUDE_PATH) \
-	$(MY_3RD_PATH)/pbc-master \
+	$(INCLUDE_LUA_JIT_PATH) \
+	$(INCLUDE_PBC_PATH) \
 
 #static link to luajit
 LOCAL_WHOLE_STATIC_LIBRARIES += luajit 

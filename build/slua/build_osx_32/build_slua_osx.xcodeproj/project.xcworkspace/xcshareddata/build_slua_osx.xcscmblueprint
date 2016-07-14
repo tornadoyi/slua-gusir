@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "f2a74f1e-497f-4e91-b1e5-ffb104dccb03++1093",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "f2a74f1e-497f-4e91-b1e5-ffb104dccb03++1093" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "f2a74f1e-497f-4e91-b1e5-ffb104dccb03++1093" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EF0B5F37-D080-4C90-B3B1-62F89CA74E6D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "f2a74f1e-497f-4e91-b1e5-ffb104dccb03++1093" : "slua-he\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "build_slua_osx",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "build_slua_3rd\/build_osx_32\/build_slua_osx.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/yi.gu@svn.happyelements.net\/repos\/svndata2",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "f2a74f1e-497f-4e91-b1e5-ffb104dccb03++1093"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96D656C61C72F83000224E51 /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656B91C72F83000224E51 /* decode.c */; };
+		96D656C71C72F83000224E51 /* wmessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BA1C72F83000224E51 /* wmessage.c */; };
+		96D656C81C72F83000224E51 /* alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BB1C72F83000224E51 /* alloc.c */; };
+		96D656C91C72F83000224E51 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BC1C72F83000224E51 /* array.c */; };
+		96D656CA1C72F83000224E51 /* bootstrap.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BD1C72F83000224E51 /* bootstrap.c */; };
+		96D656CB1C72F83000224E51 /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BE1C72F83000224E51 /* context.c */; };
+		96D656CC1C72F83000224E51 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BF1C72F83000224E51 /* map.c */; };
+		96D656CD1C72F83000224E51 /* pattern.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C01C72F83000224E51 /* pattern.c */; };
+		96D656CE1C72F83000224E51 /* proto.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C11C72F83000224E51 /* proto.c */; };
+		96D656CF1C72F83000224E51 /* register.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C21C72F83000224E51 /* register.c */; };
+		96D656D01C72F83000224E51 /* rmessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C31C72F83000224E51 /* rmessage.c */; };
+		96D656D11C72F83000224E51 /* stringpool.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C41C72F83000224E51 /* stringpool.c */; };
+		96D656D21C72F83000224E51 /* varint.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C51C72F83000224E51 /* varint.c */; };
+		96D656D81C72F86000224E51 /* pbc-lua.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656D71C72F86000224E51 /* pbc-lua.c */; };
+		C7EFBFEA1AD5206C0039363B /* slua.c in Sources */ = {isa = PBXBuildFile; fileRef = C7EFBFE81AD5206C0039363B /* slua.c */; };
+		C7EFBFEC1AD521960039363B /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFBFEB1AD521960039363B /* liblua.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96D656B91C72F83000224E51 /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decode.c; path = "../pbc-master/src/decode.c"; sourceTree = "<group>"; };
+		96D656BA1C72F83000224E51 /* wmessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wmessage.c; path = "../pbc-master/src/wmessage.c"; sourceTree = "<group>"; };
+		96D656BB1C72F83000224E51 /* alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alloc.c; path = "../pbc-master/src/alloc.c"; sourceTree = "<group>"; };
+		96D656BC1C72F83000224E51 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "../pbc-master/src/array.c"; sourceTree = "<group>"; };
+		96D656BD1C72F83000224E51 /* bootstrap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bootstrap.c; path = "../pbc-master/src/bootstrap.c"; sourceTree = "<group>"; };
+		96D656BE1C72F83000224E51 /* context.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = context.c; path = "../pbc-master/src/context.c"; sourceTree = "<group>"; };
+		96D656BF1C72F83000224E51 /* map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = map.c; path = "../pbc-master/src/map.c"; sourceTree = "<group>"; };
+		96D656C01C72F83000224E51 /* pattern.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pattern.c; path = "../pbc-master/src/pattern.c"; sourceTree = "<group>"; };
+		96D656C11C72F83000224E51 /* proto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = proto.c; path = "../pbc-master/src/proto.c"; sourceTree = "<group>"; };
+		96D656C21C72F83000224E51 /* register.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = register.c; path = "../pbc-master/src/register.c"; sourceTree = "<group>"; };
+		96D656C31C72F83000224E51 /* rmessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rmessage.c; path = "../pbc-master/src/rmessage.c"; sourceTree = "<group>"; };
+		96D656C41C72F83000224E51 /* stringpool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stringpool.c; path = "../pbc-master/src/stringpool.c"; sourceTree = "<group>"; };
+		96D656C51C72F83000224E51 /* varint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = varint.c; path = "../pbc-master/src/varint.c"; sourceTree = "<group>"; };
+		96D656D71C72F86000224E51 /* pbc-lua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "pbc-lua.c"; path = "../pbc-master/binding/lua/pbc-lua.c"; sourceTree = "<group>"; };
+		C7EFBFDC1AD5201D0039363B /* slua.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = slua.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EFBFE01AD5201D0039363B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7EFBFE81AD5206C0039363B /* slua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = slua.c; path = ../../slua.c; sourceTree = "<group>"; };
+		C7EFBFEB1AD521960039363B /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../../../liblua/osx/liblua.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7EFBFD91AD5201D0039363B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EFBFEC1AD521960039363B /* liblua.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96D656B81C72F81600224E51 /* pbc-master */ = {
+			isa = PBXGroup;
+			children = (
+				96D656D71C72F86000224E51 /* pbc-lua.c */,
+				96D656B91C72F83000224E51 /* decode.c */,
+				96D656BA1C72F83000224E51 /* wmessage.c */,
+				96D656BB1C72F83000224E51 /* alloc.c */,
+				96D656BC1C72F83000224E51 /* array.c */,
+				96D656BD1C72F83000224E51 /* bootstrap.c */,
+				96D656BE1C72F83000224E51 /* context.c */,
+				96D656BF1C72F83000224E51 /* map.c */,
+				96D656C01C72F83000224E51 /* pattern.c */,
+				96D656C11C72F83000224E51 /* proto.c */,
+				96D656C21C72F83000224E51 /* register.c */,
+				96D656C31C72F83000224E51 /* rmessage.c */,
+				96D656C41C72F83000224E51 /* stringpool.c */,
+				96D656C51C72F83000224E51 /* varint.c */,
+			);
+			name = "pbc-master";
+			sourceTree = "<group>";
+		};
+		C7EFBFD31AD5201D0039363B = {
+			isa = PBXGroup;
+			children = (
+				96D656B81C72F81600224E51 /* pbc-master */,
+				C7EFBFE61AD5204D0039363B /* src */,
+				C7EFBFDE1AD5201D0039363B /* build_slua_osx */,
+				C7EFBFDD1AD5201D0039363B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7EFBFDD1AD5201D0039363B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7EFBFDC1AD5201D0039363B /* slua.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7EFBFDE1AD5201D0039363B /* build_slua_osx */ = {
+			isa = PBXGroup;
+			children = (
+				C7EFBFEB1AD521960039363B /* liblua.a */,
+				C7EFBFDF1AD5201D0039363B /* Supporting Files */,
+			);
+			path = build_slua_osx;
+			sourceTree = "<group>";
+		};
+		C7EFBFDF1AD5201D0039363B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7EFBFE01AD5201D0039363B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7EFBFE61AD5204D0039363B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C7EFBFE81AD5206C0039363B /* slua.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7EFBFDB1AD5201D0039363B /* slua */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EFBFE31AD5201D0039363B /* Build configuration list for PBXNativeTarget "slua" */;
+			buildPhases = (
+				C7EFBFD81AD5201D0039363B /* Sources */,
+				C7EFBFD91AD5201D0039363B /* Frameworks */,
+				C7EFBFDA1AD5201D0039363B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = slua;
+			productName = build_slua_osx;
+			productReference = C7EFBFDC1AD5201D0039363B /* slua.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7EFBFD41AD5201D0039363B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = happyelements;
+				TargetAttributes = {
+					C7EFBFDB1AD5201D0039363B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = C7EFBFD71AD5201D0039363B /* Build configuration list for PBXProject "build_slua_osx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C7EFBFD31AD5201D0039363B;
+			productRefGroup = C7EFBFDD1AD5201D0039363B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7EFBFDB1AD5201D0039363B /* slua */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7EFBFDA1AD5201D0039363B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7EFBFD81AD5201D0039363B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D656CE1C72F83000224E51 /* proto.c in Sources */,
+				96D656D21C72F83000224E51 /* varint.c in Sources */,
+				96D656CF1C72F83000224E51 /* register.c in Sources */,
+				96D656D11C72F83000224E51 /* stringpool.c in Sources */,
+				96D656D01C72F83000224E51 /* rmessage.c in Sources */,
+				96D656CA1C72F83000224E51 /* bootstrap.c in Sources */,
+				C7EFBFEA1AD5206C0039363B /* slua.c in Sources */,
+				96D656C61C72F83000224E51 /* decode.c in Sources */,
+				96D656C71C72F83000224E51 /* wmessage.c in Sources */,
+				96D656CC1C72F83000224E51 /* map.c in Sources */,
+				96D656CD1C72F83000224E51 /* pattern.c in Sources */,
+				96D656D81C72F86000224E51 /* pbc-lua.c in Sources */,
+				96D656CB1C72F83000224E51 /* context.c in Sources */,
+				96D656C81C72F83000224E51 /* alloc.c in Sources */,
+				96D656C91C72F83000224E51 /* array.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7EFBFE11AD5201D0039363B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C7EFBFE21AD5201D0039363B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C7EFBFE41AD5201D0039363B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../lua-5.1.4/src",
+					"../pbc-master",
+				);
+				INFOPLIST_FILE = build_slua_osx/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../liblua/osx,
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C7EFBFE51AD5201D0039363B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../lua-5.1.4/src",
+					"../pbc-master",
+				);
+				INFOPLIST_FILE = build_slua_osx/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../liblua/osx,
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7EFBFD71AD5201D0039363B /* Build configuration list for PBXProject "build_slua_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EFBFE11AD5201D0039363B /* Debug */,
+				C7EFBFE21AD5201D0039363B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EFBFE31AD5201D0039363B /* Build configuration list for PBXNativeTarget "slua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EFBFE41AD5201D0039363B /* Debug */,
+				C7EFBFE51AD5201D0039363B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7EFBFD41AD5201D0039363B /* Project object */;
+}

@@ -26,18 +26,18 @@ fi
 
 make clean
 ISDKF="-arch armv7 -isysroot $ISDK/SDKs/$ISDKVER"
-make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=armv7 TARGET_SYS=iOS LUAJIT_A=libsluav7.a
+make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=armv7 TARGET_SYS=iOS LUAJIT_A=libluajitv7.a
 
 
 make clean
 ISDKF="-arch armv7s -isysroot $ISDK/SDKs/$ISDKVER"
-make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=armv7s TARGET_SYS=iOS LUAJIT_A=libsluav7s.a
+make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=armv7s TARGET_SYS=iOS LUAJIT_A=libluajitv7s.a
 
 make clean
 ISDKF="-arch arm64 -isysroot $ISDK/SDKs/$ISDKVER"
-make HOST_CC="gcc -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS LUAJIT_A=libslua64.a
+make HOST_CC="gcc -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS LUAJIT_A=libluajit64.a
 
 cd src
-lipo libsluav7.a -create libsluav7s.a libslua64.a -output libslua.a
-cp libslua.a $OUTPUT
+lipo libluajitv7.a -create libluajitv7s.a libluajit64.a -output libluajit.a
+cp libluajit.a $OUTPUT
 cd ..

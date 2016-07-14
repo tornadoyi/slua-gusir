@@ -1,58 +1,43 @@
-# set luajit path
-LUAJIT=./luajit
+#!/usr/bin/env bash
+SHELL_PATH=$(cd "$(dirname "$0")"; pwd)
+LUAJIT=$SHELL_PATH/../../LuaJIT-2.1.0-beta2
+OUTPUT=$SHELL_PATH/../../libs/luajit/ios
 
-# get xode path
+cd $LUAJIT
+LIPO="xcrun -sdk iphoneos lipo"
+STRIP="xcrun -sdk iphoneos strip"
+
 IXCODE=`xcode-select -print-path`
-DEVDIR=$IXCODE/Platforms
+ISDK=$IXCODE/Platforms/iPhoneOS.platform/Developer
+ISDKVER=iPhoneOS.sdk
+ISDKP=$IXCODE/usr/bin/
 
-# get ios sdk path
-IOSDIR=$DEVDIR/iPhoneOS.platform/Developer  
-SIMDIR=$DEVDIR/iPhoneSimulator.platform/Developer
+if [ ! -e $ISDKP/ar ]; then
+  sudo cp /usr/bin/ar $ISDKP
+fi
 
-# get ios sdk version
-INFOPLIST_PATH=$IXCODE/Platforms/iPhoneOS.platform/version.plist
-BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "${INFOPLIST_PATH}")
+if [ ! -e $ISDKP/ranlib ]; then
+  sudo cp /usr/bin/ranlib $ISDKP
+fi
 
-IOSVER=iPhoneOS${BUNDLE_ID}.sdk
-SIMVER=iPhoneSimulator.sdk
+if [ ! -e $ISDKP/strip ]; then
+  sudo cp /usr/bin/strip $ISDKP
+fi
 
-# get tootchain
-#IOSBIN=$IOSVER/usr/bin/
-#SIMBIN=$SIMDIR/usr/bin/
-ICC=$(xcrun --sdk iphoneos --find clang)
-IOSBIN=$(dirname $ICC)/
-SIMBIN=$(dirname $ICC)/
+make clean
+ISDKF="-arch armv7 -isysroot $ISDK/SDKs/$ISDKVER"
+make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=armv7 TARGET_SYS=iOS LUAJIT_A=libsluav7.a
 
-BUILD_DIR=$LUAJIT/build  
-  
-rm -rf $BUILD_DIR  
-mkdir -p $BUILD_DIR  
-rm *.a 1>/dev/null 2>/dev/null  
-  
-echo =================================================  
-echo ARMV7 Architecture  
-ISDKF="-arch armv7 -isysroot $IOSDIR/SDKs/$IOSVER"  
-make -j -C $LUAJIT HOST_CC="gcc -m32 " CROSS=$IOSBIN TARGET_FLAGS="$ISDKF" TARGET=armv7 TARGET_SYS=iOS clean  
-make -j -C $LUAJIT HOST_CC="gcc -m32 " CROSS=$IOSBIN TARGET_FLAGS="$ISDKF" TARGET=armv7 TARGET_SYS=iOS   
-mv $LUAJIT/src/libluajit.a $BUILD_DIR/libluajitA7.a  
-  
-echo =================================================  
-echo ARM64 Architecture  
-ISDKF="-arch arm64 -isysroot $IOSDIR/SDKs/$IOSVER"  
-make -j -C $LUAJIT HOST_CC="gcc " CROSS=$IOSBIN TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS clean  
-make -j -C $LUAJIT HOST_CC="gcc " CROSS=$IOSBIN TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS   
-mv $LUAJIT/src/libluajit.a $BUILD_DIR/libluajit64bit.a  
-  
-echo =================================================  
-echo IOS Simulator Architecture  
-ISDKF="-arch x86_64 -isysroot $SIMDIR/SDKs/$SIMVER -miphoneos-version-min=7.0"  
-make -j -C $LUAJIT HOST_CFLAGS="-arch x86_64" HOST_LDFLAGS="-arch x86_64" TARGET_SYS=iOS TARGET=x86_64 clean  
-make -j -C $LUAJIT HOST_CFLAGS="-arch x86_64" HOST_LDFLAGS="-arch x86_64" TARGET_SYS=iOS TARGET=x86_64 amalg CROSS=$SIMBIN TARGET_FLAGS="$ISDKF"  
-  
-  
-mv $LUAJIT/src/libluajit.a $BUILD_DIR/libluajitx86_64.a  
-  
-libtool -o $BUILD_DIR/libluajit-2.1-x86-armv7-arm64.a $BUILD_DIR/*.a 2> /dev/null  
-  
-mv -f $BUILD_DIR/libluajit-2.1-x86-armv7-arm64.a ./libluajit/ios
-cp -f ./libluajit/ios/libluajit-2.1-x86-armv7-arm64.a ./Plugins/iOS/libluajit-2.1-x86-armv7-arm64.a 
+
+make clean
+ISDKF="-arch armv7s -isysroot $ISDK/SDKs/$ISDKVER"
+make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=armv7s TARGET_SYS=iOS LUAJIT_A=libsluav7s.a
+
+make clean
+ISDKF="-arch arm64 -isysroot $ISDK/SDKs/$ISDKVER"
+make HOST_CC="gcc -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS LUAJIT_A=libslua64.a
+
+cd src
+lipo libsluav7.a -create libsluav7s.a libslua64.a -output libslua.a
+cp libslua.a $OUTPUT
+cd ..

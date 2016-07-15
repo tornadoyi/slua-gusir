@@ -1,8 +1,9 @@
 rem luajit static lib in windows use TDM-GCC-64
 set CUR_PATH=%cd%
 set SEHLL_PATH=%~dp0
-set LUAJIT_PATH=%SEHLL_PATH%\..\..\LuaJIT-2.1.0-beta2
-SET OUTPUT_PATH=%SEHLL_PATH%\..\..\libs\luajit\x86_64
+set ROOT_PATH=%SEHLL_PATH%..\..
+set LUAJIT_PATH=%ROOT_PATH%\LuaJIT-2.1.0-beta2
+SET OUTPUT_PATH=%ROOT_PATH%\libs\luajit\x86_64
 cd %LUAJIT_PATH%
 mingw32-make clean
 

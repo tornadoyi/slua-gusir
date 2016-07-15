@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964D712F1D387C5400F4E159 /* libluajit_x86_64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 964D712E1D387C5400F4E159 /* libluajit_x86_64.a */; };
 		96D656C61C72F83000224E51 /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656B91C72F83000224E51 /* decode.c */; };
 		96D656C71C72F83000224E51 /* wmessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BA1C72F83000224E51 /* wmessage.c */; };
 		96D656C81C72F83000224E51 /* alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656BB1C72F83000224E51 /* alloc.c */; };
@@ -22,10 +23,10 @@
 		96D656D21C72F83000224E51 /* varint.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656C51C72F83000224E51 /* varint.c */; };
 		96D656D81C72F86000224E51 /* pbc-lua.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656D71C72F86000224E51 /* pbc-lua.c */; };
 		C7EFBFEA1AD5206C0039363B /* slua.c in Sources */ = {isa = PBXBuildFile; fileRef = C7EFBFE81AD5206C0039363B /* slua.c */; };
-		C7EFBFEC1AD521960039363B /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFBFEB1AD521960039363B /* liblua.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		964D712E1D387C5400F4E159 /* libluajit_x86_64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit_x86_64.a; sourceTree = "<group>"; };
 		96D656B91C72F83000224E51 /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decode.c; path = "../pbc-master/src/decode.c"; sourceTree = "<group>"; };
 		96D656BA1C72F83000224E51 /* wmessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wmessage.c; path = "../pbc-master/src/wmessage.c"; sourceTree = "<group>"; };
 		96D656BB1C72F83000224E51 /* alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alloc.c; path = "../pbc-master/src/alloc.c"; sourceTree = "<group>"; };
@@ -41,9 +42,7 @@
 		96D656C51C72F83000224E51 /* varint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = varint.c; path = "../pbc-master/src/varint.c"; sourceTree = "<group>"; };
 		96D656D71C72F86000224E51 /* pbc-lua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "pbc-lua.c"; path = "../pbc-master/binding/lua/pbc-lua.c"; sourceTree = "<group>"; };
 		C7EFBFDC1AD5201D0039363B /* slua.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = slua.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7EFBFE01AD5201D0039363B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EFBFE81AD5206C0039363B /* slua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = slua.c; path = ../../slua.c; sourceTree = "<group>"; };
-		C7EFBFEB1AD521960039363B /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../../../liblua/osx/liblua.a; sourceTree = "<group>"; };
+		C7EFBFE81AD5206C0039363B /* slua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slua.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,13 +50,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7EFBFEC1AD521960039363B /* liblua.a in Frameworks */,
+				964D712F1D387C5400F4E159 /* libluajit_x86_64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		964D712D1D387C0600F4E159 /* luajitlib */ = {
+			isa = PBXGroup;
+			children = (
+				964D712E1D387C5400F4E159 /* libluajit_x86_64.a */,
+			);
+			name = luajitlib;
+			path = ../../../libs/luajit/osx;
+			sourceTree = "<group>";
+		};
 		96D656B81C72F81600224E51 /* pbc-master */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,14 +85,15 @@
 				96D656C51C72F83000224E51 /* varint.c */,
 			);
 			name = "pbc-master";
+			path = "../../../3rd/pbc-master";
 			sourceTree = "<group>";
 		};
 		C7EFBFD31AD5201D0039363B = {
 			isa = PBXGroup;
 			children = (
+				964D712D1D387C0600F4E159 /* luajitlib */,
 				96D656B81C72F81600224E51 /* pbc-master */,
 				C7EFBFE61AD5204D0039363B /* src */,
-				C7EFBFDE1AD5201D0039363B /* build_slua_osx */,
 				C7EFBFDD1AD5201D0039363B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,29 +106,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C7EFBFDE1AD5201D0039363B /* build_slua_osx */ = {
-			isa = PBXGroup;
-			children = (
-				C7EFBFEB1AD521960039363B /* liblua.a */,
-				C7EFBFDF1AD5201D0039363B /* Supporting Files */,
-			);
-			path = build_slua_osx;
-			sourceTree = "<group>";
-		};
-		C7EFBFDF1AD5201D0039363B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7EFBFE01AD5201D0039363B /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		C7EFBFE61AD5204D0039363B /* src */ = {
 			isa = PBXGroup;
 			children = (
 				C7EFBFE81AD5206C0039363B /* slua.c */,
 			);
 			name = src;
+			path = ../../../src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,14 +283,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"../../lua-5.1.4/src",
-					"../pbc-master",
+					"../../../LuaJIT-2.1.0-beta2/src",
+					"../../../3rd/pbc-master",
 				);
 				INFOPLIST_FILE = build_slua_osx/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					../../liblua/osx,
+					../../../libs/luajit/osx,
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,14 +306,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"../../lua-5.1.4/src",
-					"../pbc-master",
+					"../../../LuaJIT-2.1.0-beta2/src",
+					"../../../3rd/pbc-master",
 				);
 				INFOPLIST_FILE = build_slua_osx/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					../../liblua/osx,
+					../../../libs/luajit/osx,
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";

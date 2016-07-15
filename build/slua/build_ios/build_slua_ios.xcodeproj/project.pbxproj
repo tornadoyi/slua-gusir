@@ -22,7 +22,6 @@
 		96D656951C72E54900224E51 /* wmessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656881C72E54900224E51 /* wmessage.c */; };
 		96D656971C72E55500224E51 /* pbc-lua.c in Sources */ = {isa = PBXBuildFile; fileRef = 96D656961C72E55500224E51 /* pbc-lua.c */; };
 		C7A46E771AD52B4A0060FECA /* slua.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A46E751AD52B4A0060FECA /* slua.c */; };
-		C7A46E791AD52B820060FECA /* libluajit-2.1-x86-armv7-arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A46E781AD52B820060FECA /* libluajit-2.1-x86-armv7-arm64.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		96C5F9C01D3802FF007E2510 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluajit.a; path = ../../../libs/luajit/ios/libluajit.a; sourceTree = "<group>"; };
 		96D6567C1C72E54900224E51 /* alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alloc.c; path = "../pbc-master/src/alloc.c"; sourceTree = "<group>"; };
 		96D6567D1C72E54900224E51 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "../pbc-master/src/array.c"; sourceTree = "<group>"; };
 		96D6567E1C72E54900224E51 /* bootstrap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bootstrap.c; path = "../pbc-master/src/bootstrap.c"; sourceTree = "<group>"; };
@@ -53,9 +53,7 @@
 		96D656881C72E54900224E51 /* wmessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wmessage.c; path = "../pbc-master/src/wmessage.c"; sourceTree = "<group>"; };
 		96D656961C72E55500224E51 /* pbc-lua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "pbc-lua.c"; path = "../pbc-master/binding/lua/pbc-lua.c"; sourceTree = "<group>"; };
 		C7A46E5A1AD529CD0060FECA /* libslua.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libslua.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7A46E6B1AD529CE0060FECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7A46E751AD52B4A0060FECA /* slua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = slua.c; path = ../../../slua.c; sourceTree = "<group>"; };
-		C7A46E781AD52B820060FECA /* libluajit-2.1-x86-armv7-arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libluajit-2.1-x86-armv7-arm64.a"; path = "../../../libluajit/ios/libluajit-2.1-x86-armv7-arm64.a"; sourceTree = "<group>"; };
+		C7A46E751AD52B4A0060FECA /* slua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slua.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A46E791AD52B820060FECA /* libluajit-2.1-x86-armv7-arm64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,14 +86,15 @@
 				96D656881C72E54900224E51 /* wmessage.c */,
 			);
 			name = "pbc-master";
+			path = "../../../3rd/pbc-master";
 			sourceTree = "<group>";
 		};
 		C7A46E511AD529CD0060FECA = {
 			isa = PBXGroup;
 			children = (
+				96C5F9C01D3802FF007E2510 /* libluajit.a */,
 				96D6567B1C72E53400224E51 /* pbc-master */,
-				C7A46E5C1AD529CD0060FECA /* build_slua_ios */,
-				C7A46E691AD529CE0060FECA /* build_slua_iosTests */,
+				C7A46E5C1AD529CD0060FECA /* src */,
 				C7A46E5B1AD529CD0060FECA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,29 +107,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C7A46E5C1AD529CD0060FECA /* build_slua_ios */ = {
+		C7A46E5C1AD529CD0060FECA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				C7A46E781AD52B820060FECA /* libluajit-2.1-x86-armv7-arm64.a */,
 				C7A46E751AD52B4A0060FECA /* slua.c */,
 			);
-			path = build_slua_ios;
-			sourceTree = "<group>";
-		};
-		C7A46E691AD529CE0060FECA /* build_slua_iosTests */ = {
-			isa = PBXGroup;
-			children = (
-				C7A46E6A1AD529CE0060FECA /* Supporting Files */,
-			);
-			path = build_slua_iosTests;
-			sourceTree = "<group>";
-		};
-		C7A46E6A1AD529CE0060FECA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7A46E6B1AD529CE0060FECA /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = src;
+			path = ../../../src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,15 +284,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"../luajit-64/src",
+					"../../../3rd/pbc-master",
+					"../../../LuaJIT-2.1.0-beta2/src",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/happyelements/Documents/u3d_lab/u3d_lab/Projects/uLuaSource/libluajit/ios,
-				);
+				LIBRARY_SEARCH_PATHS = ../../../libs/luajit/ios;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -320,16 +298,13 @@
 		C7A46E701AD529CE0060FECA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../../libs/slua/ios;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"../luajit-64/src",
+					"../../../3rd/pbc-master",
+					"../../../LuaJIT-2.1.0-beta2/src",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/happyelements/Documents/u3d_lab/u3d_lab/Projects/uLuaSource/libluajit/ios,
-				);
+				LIBRARY_SEARCH_PATHS = ../../../libs/luajit/ios;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
